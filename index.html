@@ -53,10 +53,10 @@
             <dd>
               <ul class="list-unstyled">
                 <li>
-                  <i class="nes-icon gmail is-small"></i> <a href="mailto:abelmatiasf@gmail.com">abelmatiasf</a>
+                  <i class="nes-icon gmail is-small"></i> <a class="contact" href="mailto:abelmatiasf@gmail.com">abelmatiasf</a>
                 </li>
                 <li>
-                  <i class="nes-icon linkedin is-small"></i> <a href="https://www.linkedin.com/in/abel-franco-49385920a/" target="_blank">abel-franco-49385920a</a>
+                  <i class="nes-icon linkedin is-small"></i> <a class="contact" href="https://www.linkedin.com/in/abel-franco-49385920a/" target="_blank">abel-franco-49385920a</a>
                 </li>
               </ul>
             </dd>
@@ -279,6 +279,7 @@
       // Función para cambiar el tema
       function cambiarTema() {
         const body = document.body;
+        const links = document.querySelectorAll('a.contact');
         const boton = document.getElementById("cambiarTema");
 
         // Generar colores aleatorios para fondo y texto
@@ -291,6 +292,7 @@
         // Aplicar los colores al cuerpo y al botón
         body.style.backgroundColor = fondo;
         body.style.color = texto;
+        links.forEach(link => link.style.color = texto)
         boton.style.backgroundColor = texto;
         boton.style.color = fondo;
       }
